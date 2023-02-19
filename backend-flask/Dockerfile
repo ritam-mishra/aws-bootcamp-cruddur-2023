@@ -1,9 +1,15 @@
 FROM python:3.10-slim-buster
 
-#
+# Inside container
+# make a new folder inside container
 WORKDIR /backend-flask
 
+# Ouside container -> Inside container
+# this contains the libraries to install to run the app
 COPY requirements.txt requirements.txt
+
+# Inside container
+# Install the python libraries used for the app
 RUN pip3 install -r requirements.txt
 
 # Outside Container -> Inside container
