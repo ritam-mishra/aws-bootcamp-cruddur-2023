@@ -20,10 +20,14 @@ from opentelemetry.instrumentation.requests import RequestsInstrumentor
 from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
 from opentelemetry.sdk.trace import TracerProvider
 from opentelemetry.sdk.trace.export import BatchSpanProcessor
+from opentelemetry.sdk.trace.export import ConsoleSpanExporter, SimpleSpanProcessor
 
 #....Honeycomb....
 provider = TracerProvider()
 processor = BatchSpanProcessor(OTLPSpanExporter())
+provider.add_span_processor(processor)
+
+simple_processor = BatchSpanProcessor(ConsoleSpanExporter())
 provider.add_span_processor(processor)
 trace.set_tracer_provider(provider)
 tracer = trace.get_tracer(__name__)
