@@ -1,23 +1,29 @@
-# Stage 1: Build the Python application
-FROM python:3.9-slim-buster AS build-python
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY app.py .
-COPY . .
-COPY . .
-EXPOSE 5000
-CMD ["python", "app.py"]
+FROM python:3.10-slim-buster
 
-# Stage 2: Build the Nginx image
-FROM nginx:1.21-alpine AS build-nginx
-WORKDIR /usr/share/nginx/html
-COPY --from=build-python . .
-COPY --from=build-python . .
-COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Inside Container
+# make a new folder inside container
+WORKDIR /backend-flask
 
-# Stage 3: Final image with just the built assets
-FROM nginx:1.21-alpine
-COPY --from=build-nginx /usr/share/nginx/html /usr/share/nginx/html
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+# Outside Container -> Inside Container
+# this contains the libraries want to install to run the app
+COPY requirements.txt requirements.txt
+
+# Inside Container
+# Install the python libraries used for the app
+RUN pip3 install -r requirements.txt
+
+# Outside Container -> Inside Container
+# . means everything in the current directory
+# first period . - /backend-flask (outside container)
+# second period . /backend-flask (inside container)
+COPY . .
+
+# Set Enviroment Variables (Env Vars)
+# Inside Container and wil remain set when the container is running
+ENV FLASK_ENV=development
+
+EXPOSE ${PORT}
+
+# CMD (Command)
+# python3 -m flask run --host=0.0.0.0 --port=4567
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
