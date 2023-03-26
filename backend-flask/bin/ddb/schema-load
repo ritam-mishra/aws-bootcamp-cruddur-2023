@@ -37,7 +37,7 @@ response = ddb.create_table(
       'AttributeName': 'sk',
       'KeyType': 'RANGE'
     },
-  ],/workspace/aws-bootcamp-cruddur-2023/backend-flask/lib
+  ],
   #GlobalSecondaryIndexes=[
   #],
   BillingMode='PROVISIONED',
