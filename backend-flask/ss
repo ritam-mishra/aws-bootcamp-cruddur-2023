@@ -7,10 +7,12 @@
 # export DB_SG_RULE_ID="sgr-00556032276197d61"
 # gp env DB_SG_RULE_ID="sgr-00556032276197d61"
 
-export PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
-gp env PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
+# export PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
+# gp env PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
 
-export CONNECTION_URL="postgresql://root:password@localhost:5432/cruddur"
-gp env CONNECTION_URL="postgresql://root:password@localhost:5432/cruddur"
+# export CONNECTION_URL="postgresql://root:password@localhost:5432/cruddur"
+# gp env CONNECTION_URL="postgresql://root:password@localhost:5432/cruddur"
 
-arn:aws:lambda:us-east-1:779807585772:layer:psycopg2-py38:1
+# arn:aws:lambda:us-east-1:779807585772:layer:psycopg2-py38:1
+
+INSERT INTO public.users (display_name, email, handle, cognito_user_id) VALUES ('Londo Mollari','lmollari@centari.com' ,'londo' ,'MOCK');
