@@ -1,18 +1,20 @@
-# export ROLLBAR_ACCESS_TOKEN="a86d9efa2fb040bfbd045e28ee4c8124"
-# gp env ROLLBAR_ACCESS_TOKEN="a86d9efa2fb040bfbd045e28ee4c8124"
+# # export ROLLBAR_ACCESS_TOKEN="a86d9efa2fb040bfbd045e28ee4c8124"
+# # gp env ROLLBAR_ACCESS_TOKEN="a86d9efa2fb040bfbd045e28ee4c8124"
 
-# export DB_SG_ID="sg-09f16c44838ad3996"
-# gp env DB_SG_ID="sg-09f16c44838ad3996"
+# # export DB_SG_ID="sg-09f16c44838ad3996"
+# # gp env DB_SG_ID="sg-09f16c44838ad3996"
  
-# export DB_SG_RULE_ID="sgr-00556032276197d61"
-# gp env DB_SG_RULE_ID="sgr-00556032276197d61"
+# # export DB_SG_RULE_ID="sgr-00556032276197d61"
+# # gp env DB_SG_RULE_ID="sgr-00556032276197d61"
 
-# export PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
-# gp env PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
+# # export PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
+# # gp env PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
 
-# export CONNECTION_URL="postgresql://root:password@localhost:5432/cruddur"
-# gp env CONNECTION_URL="postgresql://root:password@localhost:5432/cruddur"
+# # export CONNECTION_URL="postgresql://root:password@localhost:5432/cruddur"
+# # gp env CONNECTION_URL="postgresql://root:password@localhost:5432/cruddur"
 
-# arn:aws:lambda:us-east-1:779807585772:layer:psycopg2-py38:1
+# # arn:aws:lambda:us-east-1:779807585772:layer:psycopg2-py38:1
 
-INSERT INTO public.users (display_name, email, handle, cognito_user_id) VALUES ('Londo Mollari','lmollari@centari.com' ,'londo' ,'MOCK');
+# INSERT INTO public.users (display_name, email, handle, cognito_user_id) VALUES ('Londo Mollari','lmollari@centari.com' ,'londo' ,'MOCK');
+
+# export REACT_APP_BACKEND_URL="https://4567-ritammishra-awsbootcamp-12gnn9w93la.us93.gitpod.io"
