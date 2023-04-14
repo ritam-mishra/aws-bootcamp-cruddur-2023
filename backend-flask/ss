@@ -27,3 +27,11 @@
 # aws iam create-role --role-name CruddurServiceExecutionPolicy --assume-role-policy-document "file://aws/policies/service-assume-role-execution-policy.json" 
 
 # us-east-1:779807585772:parameter
+
+# aws ecs execute-command  \
+# --region $AWS_DEFAULT_REGION \
+# --cluster cruddur \
+# --task a375134167224ec2aa817f366aee7c34 \
+# --container backend-flask \
+# --command "/bin/bash" \
+# --interactive
