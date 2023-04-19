@@ -1,5 +1,5 @@
 docker build \
---build-arg REACT_APP_BACKEND_URL="https://cruddur-alb-1763940184.us-east-1.elb.amazonaws.com:4567" \
+--build-arg REACT_APP_BACKEND_URL="https://api.cruddur.com" \
 --build-arg REACT_APP_AWS_PROJECT_REGION="$AWS_DEFAULT_REGION" \
 --build-arg REACT_APP_AWS_COGNITO_REGION="$AWS_DEFAULT_REGION" \
 --build-arg REACT_APP_AWS_USER_POOLS_ID="us-east-1_5jwTEAAUE" \
@@ -7,3 +7,23 @@ docker build \
 -t frontend-react-js \
 -f Dockerfile.prod \
 .
+
+
+docker run --rm \
+-p 4567:4567 \
+--env AWS_ENDPOINT_URL: "http://dynamodb-local:8000" \
+--env CONNECTION_URL: "postgresql://postgres:password@db:5432/cruddur" \
+--env FRONTEND_URL: "https://3000-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}" \
+--env BACKEND_URL: "https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}" \
+--env OTEL_SERVICE_NAME: 'backend-flask' \
+--env OTEL_EXPORTER_OTLP_ENDPOINT: "https://api.honeycomb.io" \
+--env OTEL_EXPORTER_OTLP_HEADERS: "x-honeycomb-team=${HONEYCOMB_API_KEY}" \
+--env AWS_XRAY_URL: "*4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}*" \
+--env AWS_XRAY_DAEMON_ADDRESS: "xray-daemon:2000" \
+--env AWS_DEFAULT_REGION: "${AWS_DEFAULT_REGION}" \
+--env AWS_ACCESS_KEY_ID: "${AWS_ACCESS_KEY_ID}" \
+--env AWS_SECRET_ACCESS_KEY: "${AWS_SECRET_ACCESS_KEY}"   \  
+--env ROLLBAR_ACCESS_TOKEN: "${ROLLBAR_ACCESS_TOKEN}" \      
+--env AWS_COGNITO_USER_POOL_ID: "${AWS_COGNITO_USER_POOL_ID}" \
+--env AWS_COGNITO_USER_POOL_CLIENT_ID: "30qtflhne1iasqbl1a9atmgfv7"     
+-it backend-flask-prod
