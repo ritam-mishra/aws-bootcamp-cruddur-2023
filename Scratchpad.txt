@@ -1,5 +1,5 @@
 docker build \
---build-arg REACT_APP_BACKEND_URL="https://api.cruddur.com" \
+--build-arg REACT_APP_BACKEND_URL="https://api.cruddur.live" \
 --build-arg REACT_APP_AWS_PROJECT_REGION="$AWS_DEFAULT_REGION" \
 --build-arg REACT_APP_AWS_COGNITO_REGION="$AWS_DEFAULT_REGION" \
 --build-arg REACT_APP_AWS_USER_POOLS_ID="us-east-1_5jwTEAAUE" \
@@ -27,3 +27,20 @@ docker run --rm \
 --env AWS_COGNITO_USER_POOL_ID="${AWS_COGNITO_USER_POOL_ID}" \
 --env AWS_COGNITO_USER_POOL_CLIENT_ID="30qtflhne1iasqbl1a9atmgfv7" \    
 -it backend-flask-prod
+
+
+export ROLLBAR_ACCESS_TOKEN="a86d9efa2fb040bfbd045e28ee4c8124"
+gp env ROLLBAR_ACCESS_TOKEN="a86d9efa2fb040bfbd045e28ee4c8124"
+
+export DB_SG_ID="sg-09f16c44838ad3996"
+gp env DB_SG_ID="sg-09f16c44838ad3996"
+ 
+export DB_SG_RULE_ID="sgr-00556032276197d61"
+gp env DB_SG_RULE_ID="sgr-00556032276197d61"
+
+export PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
+gp env PROD_CONNECTION_URL="postgresql://cruddurroot:database123@cruddur-db-instance.cedj4eewyhjy.us-east-1.rds.amazonaws.com:5432/cruddur"
+
+export CONNECTION_URL="postgresql://root:password@localhost:5432/cruddur"
+gp env CONNECTION_URL="postgresql://postgres:password@db:5432/cruddur"
+gp env CONNECTION_URL="postgresql://postgres:password@localhost:5432/cruddur"
