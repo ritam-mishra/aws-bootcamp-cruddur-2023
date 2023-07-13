@@ -24,6 +24,7 @@ def lambda_handler(event, context):
       """
       print('SQL Statement ----')
       print(sql)
+
       conn = psycopg2.connect(os.getenv('CONNECTION_URL'))
       cur = conn.cursor()
       params = [
@@ -32,7 +33,8 @@ def lambda_handler(event, context):
         user_handle,
         user_cognito_id
       ]
-      cur.execute(sql,params)
+      cur.execute(sql,tuple(params))
+      cur.execute(sql)
       conn.commit() 
 
     except (Exception, psycopg2.DatabaseError) as error:
