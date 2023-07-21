@@ -2,12 +2,7 @@
 
 ABS_PATH=$(readlink -f "$0")
 SERVERLESS_PATH=$(dirname $ABS_PATH)
-BIN_PATH=$(dirname $SERVERLESS_PATH)
-PROJECT_PATH=$(dirname $BIN_PATH)
-SERVERLESS_PROJECT_PATH="$PROJECT_PATH/thumbing-serverless-cdk"
+DATA_FILE_PATH="$SERVERLESS_PATH/files/data.jpg"
 
-cd $SERVERLESS_PROJECT_PATH
-
-npm install
-rm -rf node_modules/sharp
-SHARP_IGNORE_GLOBAL_LIBVIPS=1 npm install --arch=x64 --platform=linux --libc=glibc sharp
+aws s3 rm "s3://cruddur-uploaded-avatars/avatars/original/data.jpg"
+aws s3 rm "s3://assets.$DOMAIN_NAME/avatars/processed/data.jpg"
