@@ -11,7 +11,6 @@ gp env HONEYCOMB_API_KEY="my api key"
 * Added OpenTelemetry to backend enviornment variables in docker-compose.yml  
 ![222496226-8e51b3e3-63ba-4834-b8ea-13734a89ae8b](https://github.com/ritam-mishra/aws-bootcamp-cruddur-2023/assets/92872259/279c72b8-e865-413a-8b49-b8fc08ec564a)
 
-![image](https://user-images.githubusercontent.com/105418424/222496226-8e51b3e3-63ba-4834-b8ea-13734a89ae8b.png)
 ---------------
 * Added opentelemetry modules into `requirements.txt` file  
 ![222496226-8e51b3e3-63ba-4834-b8ea-13734a89ae8b](https://github.com/ritam-mishra/aws-bootcamp-cruddur-2023/assets/92872259/265f3e54-2491-4e2c-a12e-65f69a66609b)
