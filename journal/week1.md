@@ -9,7 +9,7 @@
 * I added DynamoDB Local and Postgres to that *Docker-compose.yml* file, after following the steps from the youtube playlist
 * Now docker compose up to run the containers (building the specific images if needed) and wait until all containers are in *started* state.
 
-![image](![image](https://github.com/ritam-mishra/aws-bootcamp-cruddur-2023/assets/92872259/3890f0d1-f99b-422d-9fbf-85e908ba153b))
+![image](https://github.com/ritam-mishra/aws-bootcamp-cruddur-2023/assets/92872259/3890f0d1-f99b-422d-9fbf-85e908ba153b))
 
 ### Document the Notification Endpoint for the OpenAI Document
 Following along with the *Create the notification feature* video:
