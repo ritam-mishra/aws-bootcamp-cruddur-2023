@@ -236,7 +236,5 @@ def rollbar_test():
 ---------------
 
 #### Testing errors of the app, it is showing up... No problem✌️:
-* Remove `return` from last line in `home_activities.py`  
-* Now check Rollbar
 
 ![image](https://github.com/ritam-mishra/aws-bootcamp-cruddur-2023/assets/92872259/d5797bde-cfe4-4235-a697-59d71f25c1f7)
