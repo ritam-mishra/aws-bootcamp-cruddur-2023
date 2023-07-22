@@ -162,8 +162,8 @@ pip install -r requirements.txt
   **Added ***watchtower*** to `requirements.txt`,
   **and added logger in `home_activities.py` )
 
-[Commit Link](https://github.com/ritam-mishra/aws-bootcamp-cruddur-2023/commit/8335af1641aa993405352108b793ee581e83ee22 "Commit Link")
-
+[[Commit Link](https://github.com/ritam-mishra/aws-bootcamp-cruddur-2023/commit/8335af1641aa993405352108b793ee581e83ee22 "Commit Link")
+](https://github.com/ritam-mishra/aws-bootcamp-cruddur-2023/commit/8335af1641aa993405352108b793ee581e83ee22)
 * And I got logs from our log group *"cruddur"*
 
 ## Rollbar
@@ -228,7 +228,6 @@ def rollbar_test():
 
 ---------------
 * Test endpoint URL `https://4567-${GITPOD_WORKSPACE_ID}.${GITPOD_WORKSPACE_CLUSTER_HOST}/rollbar/test`  
-returns `Hello World!` and shows result as ***Warning*** so , I have to select all filters!
 * Successfully can see the error in the code or errors logging in rollbar is alright and still showing well.
 
 ![image](https://github.com/ritam-mishra/aws-bootcamp-cruddur-2023/assets/92872259/e396a2c9-1d5f-4bf8-ae23-9e825335fb40)
