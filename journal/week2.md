@@ -1,7 +1,7 @@
 # Week 2 — Distributed Tracing
 ## Honeycomb Implementation
 ### Instrument Honeycomb with OTEL
-* Create an environment called "Bootcamp" and export the "API KEY" environment variable in Gitpod.  
+* Created an environment called "Bootcamp" and exported the "API KEY" environment variable in Gitpod.  
 ```APIKEY
 export HONEYCOMB_API_KEY="my api key"
 gp env HONEYCOMB_API_KEY="my api key"
