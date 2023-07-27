@@ -33,3 +33,4 @@ env:
 artifacts:
   files:
     - imagedefinitions.json
+    
