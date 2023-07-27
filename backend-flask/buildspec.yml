@@ -32,5 +32,4 @@ env:
     REPO_NAME: backend-flask:latest
 artifacts:
   files:
-    - imagedefinitions.json
-    
+    - imagedefinitions.json    
