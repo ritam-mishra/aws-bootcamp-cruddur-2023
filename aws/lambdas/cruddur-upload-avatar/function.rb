@@ -7,7 +7,7 @@ def handler(event:, context:)
 
   allowed_origins = [
   
-    "https://3000-ritammishra-awsbootcamp-pd2rwrjntmd.ws-us102.gitpod.io",
+    "https://ritammishra-awsbootcamp-r0gk9ihef7h.ws-us102.gitpod.io",
 
   ]
 
