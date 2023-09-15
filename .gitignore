@@ -2,4 +2,6 @@ docker/**/*
 frontend-react-js/build/*
 *.env
 node_modules
-aws/lambdas/lambda-authorizer.zip
+.aws-sam
+build.toml
+tmp/*
